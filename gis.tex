@@ -1,0 +1,144 @@
+% "Hello world!" document for the ConTeXt typesetting system
+%
+% === History ===
+% Created by Sanjoy Mahajan <sanjoy@mit.edu> on 2006-12-29. 
+% This template created by Warren Lewington 2017-05-26.
+% This document is a starter template built from Sanjay Mahajan's sample.
+% 
+% This document code is the public domain (no copyright).
+% The content within any document from this template is copyright to Warren Lewington.
+% Any errors are mine alone, please contact me if you find any.
+% <warren.lewington@dapsco.com.au> <wjlewington@bigpond.com>.
+
+
+% This is a comment, using the % symbol
+%  
+\setupcolors[state=start]       % otherwise you get greyscale
+\definecolor[headingcolor][r=1,b=0.4] % I have to play with these 
+
+% for the document info/catalog (reported by 'pdfinfo', for example)
+\setupinteraction[state=start,  % make hyperlinks active, etc.
+  title={GIS},
+  subtitle={Intorducing GIS by Warren Lewington},
+  author={Warren Lewington},
+  keyword={template technical manual white}]
+
+% useful urls
+\useURL[author-email][mailto:wjlewington@bigpond.com][][wjlewington@bigpond.com]
+\useURL[wiki][http://wiki.contextgarden.net][][\ConTeXt\ wiki]
+\useURL[Warren Lewington][mailto:warren.lewington@dapsco.com.au][][warren.lewington@dapsco.com.au]
+
+% US paper: letter; the sensible default is [A4][A4] (A4 typesetting,
+% printed on A4 paper)
+\setuppapersize[A4][A4]
+% this looks like page bleeds - which would be better in metric at some point.
+\setuplayout[topspace=0.5in, backspace=1in, header=11pt, footer=11pt,
+  height=middle, width=middle]
+
+% Warren un\-commented the next line to see the layout:
+% which shows the frames as a border.
+% \showframe
+
+\setupitemize[inbetween={}, style=bold]
+
+% set inter-paragraph spacing
+\setupwhitespace[medium]
+
+% comment the next line to not indent paragraphs
+% I have yet to see this work as at 2017-05-29
+\setupindenting[medium, yes]
+
+\starttext
+
+\title{GIS: An Introduction}
+
+\placefigure[middle,none] {} {\externalfigure[logo1dapscocolour.png][width=10cm]}
+	%\setupexternalfigures[directory={Images, /context/Images}]
+	%\setupexternalfigures[location=global]
+	%\externalfigure[logo1dapscocolour.png][width=10cm]
+
+
+%	\startstandardmakeup
+		\midaligned{GIS: An introduction}
+		\midaligned{by}
+		\midaligned{Warren Lewington}
+%	\stopstandardmakeup
+\startfrontmatter 
+
+\placecontent
+\setuplist
+[chapter]
+[before=\blank,after=\blank,style=bold]
+
+\stopfrontmatter
+
+% headers and footers
+\setupfooter[style=\it]
+\setupfootertexts[\date\hfill Dapsco Pty Ltd template]
+\setuppagenumbering[location={header,right}, style=bold]
+
+\setupbodyfont[11pt] % Default size is 12pt.
+
+% This picks up the colour of the heading
+\setuphead[section,chapter,subject][color=black] 
+\setuphead[section,subject][style={normal},
+  before={.5}, after={bigskip}]
+\setuphead[chapter][style={normal}]
+\setuphead[title][style={normal},
+  before={\begingroup\setupbodyfont[11pt]},
+  after={\leftline{ W. Lewington $\langle$\from[author-email]$\rangle$}
+         \bigskip\endgroup}]
+
+
+	\chapter{\bfc Introduction}
+Geographical Information Systems or "GIS" deal with spatial information using computers. A GIS consists of:
+
+\startitemize[1]                % tags are lowercase letters
+\item Digital data that will be viewed and analysed.
+\item Computer hardware.
+\item Computer software.
+\stopitemize
+
+With a GIS application you can use digital maps to add spatial information, create spatial information and print or produce new information with the data created. The geo-spatial infomation enables us to be able to see trends and new patterns of information.
+
+\section[Section 1]{\bfa GIS History}
+	GIS begain to be used inteh 1970's. it was a field initially only accessible to large corporations and governments. Over time software packages have become more accessibale like QGIS, and amatuers and professionals can begin using GIS packages realtively easily. 
+
+\section[Section 2]{\bfa GIS Basic Layer Principles}
+	Apart form the toolbars, menus and panels, GIS applications display maps as layers. Map layers are sotred as files in the project file. Each layer can be a separate layer representing roads, water-courses and so on. 
+
+\section[Section 3]{\bfa Map Legend Principles}
+	Map layers are listed in the GIS applications map legend, rather than a traditional maps topographical information. The layers of a GIS map shoud then be related to legend information in this sense. Layers also determine, as in other software, the way in which the order of things are displayed. Rivers could be displayed over roads if desired. And yes, This I do know. 
+
+\section[Section 4]{GIS Data}
+	... your text ...
+	
+\page
+
+\completeindex
+
+\startbackmatter
+
+% headers and footers
+\setupfooter[style=\it]
+\setupfootertexts[\date\hfill Dapsco Pty Ltd template]
+\setuppagenumbering[location={header,center}, style=bold]
+
+\setupbodyfont[11pt] % Default size is 12pt.
+
+% This picks up the colour of the heading
+\setuphead[section,chapter,subject][color=black] 
+\setuphead[section,subject][style={normal},
+  before={.5}, after={bigskip}]
+\setuphead[chapter][style={normal}]
+\setuphead[title][style={normal},
+  before={\begingroup\setupbodyfont[11pt]},
+  after={\leftline{ W. Lewington $\langle$\from[author-email]$\rangle$}
+         \bigskip\endgroup}]
+
+
+\placefigure[middle,none] {} {\externalfigure[logo1dapscocolour.png][width=10cm]}
+
+\stopbackmatter
+
+\stoptext
