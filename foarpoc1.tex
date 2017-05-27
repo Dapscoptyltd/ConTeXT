@@ -11,5 +11,113 @@
 
 \definebar[a][color=blue]
 \starttext
+\vfill
+\setupcombinations[distance=10px, width=\textwidth, align=flushleft, style={\setupbodyfont[14pt]}]
+\startcombination[4*2]%
+{\externalfigure[Tool1.jpg][width=.25\textwidth]}{First section of text.}
+{\externalfigure[Tool2.jpg][width=.125\textwidth]\externalfigure[Tool3.jpg][width=.125\textwidth]}{Second section of text.}
 
+{\externalfigure[Tool1.jpg][width=.2\textwidth]}{Third section of text}
+
+{\setupcombinations[distance=5px, width=fit]
+\startcombination[2*2]
+{\externalfigure[Tool2.jpg][width=.11\textwidth]}{Scheme label}
+{\externalfigure[Tool3.jpg][width=.11\textwidth]}{Scheme label}
+{\externalfigure[Tool4.jpg][width=.11\textwidth]}{Scheme label}
+\stopcombination}
+{Fourth section of text.}
+%nextrow
+{\externalfigure[Tool1.jpg][width=.1\textwidth] \externalfigure[Tool2.jpg][width=.1\textwidth]}{Fifth section of text.}
+{\externalfigure[Tool3.jpg][width=.24\textwidth]}{Sixth section of text.}
+{\externalfigure[Tool4.jpg][width=.24\textwidth]}{Seventh section of text.}
+{\externalfigure[Tool1.jpg][width=.24\textwidth]}{Eight section of text.}
+\stopcombination
+
+
+
+\page
+\setupcombinations[distance=10px, width=\textwidth, align={normal, hanging, hz}]
+
+\startcombination[2*1]
+{\externalfigure[Tool2.jpg][width=.49\textwidth]}{
+Records are defined in 3 logical tables\footnote. \quote{Rows} are defined in the ArchEntity table, which also holds cruical GIS data. \quote{Columns} are defined by the attribute and Ideal Entity tables. The Attribute table defines what attributes are possible, their names, and their list/export formats. The Ideal Entity table defines which attributes belong to which entity. By defining these tables in DML (Data {\em Manipulation} Language) rather than DDL (Data {\em Definition} Language), the structure of the database remains consistent. This consistent structure allows for significant query reuse and allows us to dynamically script the fields of a workflow {\em after} all the fundamental data interactions of FAIMS Mobile have been rewritten.
+
+\page
+
+\vfill
+\vfill
+{\tfx Image by attribution.}
+
+}
+{\externalfigure[Tool3.jpg][width=.49\textwidth]}{
+The three {\em sine qua non} open-source libraries of this project are:
+\startitemize[joinedup, packed]
+\item JavaRosa which allows us to parse XML into native android elements;
+\item BeanShell which allows us to include a java-like scripting language;
+\item Sqlite which is a supremely stable single-user database;
+\stopitemize
+
+By relying on stable, free, and public code we did not have to reinvent the wheel. We could, instead, focus on implementing our data schema and the novel features required by our environment.
+}
+\stopcombination
+\page
+
+
+\setuplist
+    [section]
+    [alternative=e, color=blue, style={\tfc}, prefix=yes, width={\textwidth}]
+\vfill
+{\tfc Quick Navigation:}
+
+\placecontent
+\vfill
+
+{\tfb Abstract:}
+
+Abstract text area..
+
+\vfill
+
+
+\section{New Section}
+
+Tenth section of text.
+
+
+\placefigure[here, none][fig1]{}{\externalfigure[Tool4.jpg][width=.55\textwidth]}
+
+Eleventh section of text. 
+
+\page
+\placefigure[here,none]{}{
+
+\startcombination[2*1]
+
+	{\externalfigure[Tool1.jpg][width=.35\textwidth]}{}
+	{\externalfigure[Tool2.jpg][width=.35\textwidth]}{}
+
+\stopcombination}
+
+Twelfth section of text.
+
+
+\page
+
+
+\startcombination[2*1]
+{\externalfigure[Tool3.jpg][width=.58\textwidth]}{}
+{\framed[width=.4\textwidth, height=\textheight,  align={nothyphenated,verytolerant}, frame=off]{\setupwhitespace[big]Note the formatting here. 
+\vfill}
+}{}
+\stopcombination
+
+\page
+\startcombination[2*2]
+{\externalfigure[Tool4.jpg][width=.49\textwidth]}{Label again}
+{\externalfigure[Tool1.jpg][width=.49\textwidth]}{Label again 2}
+{\externalfigure[Tool2.jpg][width=.49\textwidth]}{Label again 3}
+{\framed[width=.49\textwidth, height=.4\textheight,  align={nothyphenated,verytolerant}, frame=off]{TThirteenth section of text with \quote{modules} a quote.}}{}
+\stopcombination
+
+%\stopcombination
 \stoptext
